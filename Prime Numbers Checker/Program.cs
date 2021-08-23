@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Prime_Numbers_Checker
 {
@@ -28,14 +28,16 @@ namespace Prime_Numbers_Checker
                         // PrimeNum / 3 = R   -so-  PrimeNum / R = 3 
                         // if you checked a number you already checked the other side
                         int counter = 0;
-                        for (int i = 3; i < PrimeNum / i; i += 2)
+                        for (int i = 2; i < PrimeNum / i; i += 2)
                         {
                             counter++;
-                            if (PrimeNum % i == 0)
+                            if (PrimeNum % (i + 1) == 0)
+                            {
                                 Console.WriteLine("Loop Counter : " + counter);
                                 return false;
+                            }
                             // ignore Multiples   : Not completed yet 
-                            if (i % 5 == 0)
+                            if ((i+1) % 5 == 0)
                                 i += 2;
                             
                         }
