@@ -17,7 +17,7 @@ namespace Prime_Numbers_Checker
                     if (PrimeNum == 2)
                         return true;
                     // Check Even Number 
-                    if (PrimeNum % 2 == 0)
+                    if (PrimeNum % 2 == 0 || PrimeNum % 5 == 0)
                        return false;
                     else
                     {
